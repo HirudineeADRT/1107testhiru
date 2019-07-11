@@ -1,0 +1,145 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "9be5535a-2978-47c5-b16b-5ead7c963036": {
+        "id": "9be5535a-2978-47c5-b16b-5ead7c963036",
+        "parent": null,
+        "name": "test",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "bc137f58-8900-4d1a-b973-cebbf1c9123b",
+          "3c2d4728-933e-44e1-a03f-fb438b042ed7",
+          "1a3178dd-8682-4249-8718-5d7a06ac7b9d"
+        ],
+        "isRemovable": false,
+        "filePath": "test"
+      },
+      "bc137f58-8900-4d1a-b973-cebbf1c9123b": {
+        "id": "bc137f58-8900-4d1a-b973-cebbf1c9123b",
+        "parent": "9be5535a-2978-47c5-b16b-5ead7c963036",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "2026cdac-feb7-46cd-a74e-af18aba29a9f": {
+        "id": "2026cdac-feb7-46cd-a74e-af18aba29a9f",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.testfunction = require(\"./test/function.js\").handler;\nexports.testtest = require(\"./test/test.py\").handler;"
+      },
+      "3c2d4728-933e-44e1-a03f-fb438b042ed7": {
+        "id": "3c2d4728-933e-44e1-a03f-fb438b042ed7",
+        "parent": "9be5535a-2978-47c5-b16b-5ead7c963036",
+        "name": "test.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/test.py",
+        "code": "def handler(request, response):\n    \n    response.send({\"message\": \"Successfully executed\"})\n",
+        "config": {
+          "runtime": "python2.7",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "1a3178dd-8682-4249-8718-5d7a06ac7b9d": {
+        "id": "1a3178dd-8682-4249-8718-5d7a06ac7b9d",
+        "parent": "9be5535a-2978-47c5-b16b-5ead7c963036",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "9be5535a-2978-47c5-b16b-5ead7c963036",
+    "openFiles": [
+      "bc137f58-8900-4d1a-b973-cebbf1c9123b",
+      "3c2d4728-933e-44e1-a03f-fb438b042ed7"
+    ],
+    "currentFileId": "3c2d4728-933e-44e1-a03f-fb438b042ed7",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "3c2d4728-933e-44e1-a03f-fb438b042ed7",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/test",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_REGION",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "test",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {
+      "AWS": "us-east-1"
+    },
+    "lastSave": 1562825006521
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "test",
+      "url": "https://github.com/HirudineeADRT/1107testhiru"
+    }
+  }
+}
